@@ -1,0 +1,84 @@
+function Main.main 14
+push constant 30
+pop local 12
+push constant 0
+pop local 8
+push constant 10
+pop local 9
+push constant 10
+pop local 10
+push constant 0
+push constant 0
+push constant 30
+call SquareGame.new 3
+pop local 0
+push constant 60
+push constant 0
+push constant 20
+call SquareGame.new 3
+pop local 1
+push constant 80
+push constant 0
+push constant 40
+call SquareGame.new 3
+pop local 2
+push constant 120
+push constant 10
+push constant 50
+call SquareGame.new 3
+pop local 3
+push local 1
+push constant 0
+call SquareGame.setColor 2
+pop temp 0
+push local 2
+push constant 0
+call SquareGame.setColor 2
+pop temp 0
+push local 3
+push constant 0
+call SquareGame.setColor 2
+pop temp 0
+push local 0
+call SquareGame.fall 1
+pop temp 0
+push local 1
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 1
+call SquareGame.fall 1
+pop temp 0
+push local 2
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 2
+call SquareGame.fall 1
+pop temp 0
+push local 3
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 3
+call SquareGame.fall 1
+pop temp 0
+label WHILE_EXP0
+push local 8
+push local 9
+gt
+not
+if-goto WHILE_END0
+goto WHILE_EXP0
+label WHILE_END0
+push local 0
+call SquareGame.dispose 1
+pop temp 0
+push local 1
+call SquareGame.dispose 1
+pop temp 0
+push constant 0
+return

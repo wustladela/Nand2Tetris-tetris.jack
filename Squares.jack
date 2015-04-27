@@ -1,0 +1,36 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/09/Square/Square.jack
+
+/**
+ * Implements an array of squares
+ * Jack OS was unable to use this file correctly.
+ */
+class Squares {
+
+    // Location on the screen
+    field int x, y;
+
+    // The size of the square
+    field int size, numSquares;
+    field Array myArray;
+    /** Constructs a new square with a given location and size. */
+    constructor Squares new(int Ax, int Ay, int Asize, int Num) {
+        let x = Ax;
+        let y = Ay;
+        let size = Asize;
+        let numSquares = Num;
+        let myArray = Array.new(numSquares);
+        do drawSquares();
+        return this;
+    }
+    method void drawSquares() {
+        do Screen.setColor(true);
+        do Screen.drawRectangle(x, y+size, x + size, y + size);
+        //do Screen.drawRectangle(x+40, y+10, x + size, y + size);
+        //do Screen.drawRectangle(x+70, y+20, x + size, y + size);
+        return;
+    }
+
+}

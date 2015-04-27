@@ -1,0 +1,48 @@
+/*in class initializes a new Square Dance game and starts it.
+ */
+class Main {
+
+    /** Initializes a new game and starts it. */    
+    function void main() {
+        var SquareGame game, game2, game3, game4, game5, game6, game7;
+        var Array squares;
+        var int num, maxNum, index_x, index_y, size;
+        var Square temp;
+        let size = 30;
+        let num = 0;
+        let maxNum = 10;
+        let index_x = 10;
+
+        
+        let game = SquareGame.new(0, 0, 30);
+        //do Output.printString("made the first square");
+        
+        let game2 = SquareGame.new(60, 0, 20);
+
+        let game3 = SquareGame.new(80, 0, 40);
+
+        let game4 = SquareGame.new(120, 10, 50);
+        //do Output.printString("made the second square");
+        
+        //hide other squares first
+        do game2.setColor(false);
+        do game3.setColor(false);
+        do game4.setColor(false);
+        //start falling
+        do game.fall();
+
+        do game2.setColor(true);
+        do game2.fall();
+        do game3.setColor(true);
+        do game3.fall();
+        do game4.setColor(true);
+        do game4.fall();
+
+        while(num>maxNum){
+        	//do squares[num].dispose();
+        }
+        do game.dispose();
+        do game2.dispose();
+        return;
+    }
+}
