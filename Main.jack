@@ -22,12 +22,19 @@ class Main {
         let game3 = SquareGame.new(80, 0, 40);
 
         let game4 = SquareGame.new(120, 10, 50);
+
+        let game5 = SquareGame.new(130, 10, 20);
+        let game6 = SquareGame.new(150, 0, 10);
+        let game7 = SquareGame.new(160, 10, 10);
         //do Output.printString("made the second square");
         
         //hide other squares first
         do game2.setColor(false);
         do game3.setColor(false);
         do game4.setColor(false);
+        do game5.setColor(false);
+        do game6.setColor(false);
+        do game7.setColor(false);
         //start falling
         do game.fall();
 
@@ -37,6 +44,12 @@ class Main {
         do game3.fall();
         do game4.setColor(true);
         do game4.fall();
+        do game5.setColor(true);
+        do game5.fall();
+        do game6.setColor(true);
+        do game6.fall();
+        do game7.setColor(true);
+        do game7.fall();
 
         while(num>maxNum){
         	//do squares[num].dispose();

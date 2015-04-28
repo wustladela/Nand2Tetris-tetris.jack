@@ -27,6 +27,21 @@ push constant 10
 push constant 50
 call SquareGame.new 3
 pop local 3
+push constant 130
+push constant 10
+push constant 20
+call SquareGame.new 3
+pop local 4
+push constant 150
+push constant 0
+push constant 10
+call SquareGame.new 3
+pop local 5
+push constant 160
+push constant 10
+push constant 10
+call SquareGame.new 3
+pop local 6
 push local 1
 push constant 0
 call SquareGame.setColor 2
@@ -64,6 +79,30 @@ not
 call SquareGame.setColor 2
 pop temp 0
 push local 3
+call SquareGame.fall 1
+pop temp 0
+push local 4
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 4
+call SquareGame.fall 1
+pop temp 0
+push local 5
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 5
+call SquareGame.fall 1
+pop temp 0
+push local 6
+push constant 0
+not
+call SquareGame.setColor 2
+pop temp 0
+push local 6
 call SquareGame.fall 1
 pop temp 0
 label WHILE_EXP0
